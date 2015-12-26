@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="demo" ng-strict-di>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+
+    <div ng-repeat="item in eventmetrics">
+        <div ng-repeat="metric in item.metric">
+            <div ng-repeat="event in metric.event">
+                <tr>
+                    <td>{{event.id}}</td> <br>
+                    <td>{{event.name}}</td> <br>
+                    <td>{{event.date}}</td> <br>
+                    <td>{{event.time}}</td> <br>
+                    <td>{{event.description}}</td> <br>
+                    <td>{{event.address}}</td> <br> <br>
+                </tr>
+            </div>
+            <div ng-repeat="meal in metric.meal">
+                <ul>
+                    <li>{{meal.id}}</li>
+                    <li>{{meal.name}}</li>
+                    <li>{{meal.description}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<script src="../untitled/js/script.js"></script>
+</body>
+</html>
